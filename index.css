@@ -1,0 +1,147 @@
+*{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+button{
+    padding:10px;
+    border: 0px solid black;
+    text-transform: uppercase;
+    border-radius: 5px;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+.hide{
+    display:none;
+}
+
+body{
+    background-color: blueviolet;
+}
+
+#searchBar,#searchBtn{
+    margin: 0;
+    padding:20px;
+    height: fit-content;
+    border: 0.5px solid black;
+    outline: none;
+}
+
+#searchBar{
+    border-right: 0px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+#searchBtn{
+    border-left: 0px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+#mainActions{
+    display: flex;
+    width: 100%;
+    position: relative;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.container{
+    position: relative;
+    margin: 0 auto;
+    height: 100vh;
+    width: 100vw;
+    color:beige;
+    overflow: hidden;
+}
+
+.container,main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width:100%;
+    margin: 0;
+}
+
+main{
+    padding-top: 0px;
+
+}
+
+#recipe_details{
+    display: flex;
+    flex-direction: column;
+}
+
+#cockTailContents{
+    display: flex;
+    flex-direction:row;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+#myCocktailImg,#tab_container{
+    position: relative;
+    width: 40%;
+}
+
+#myCocktailImg{
+    border-radius: 20px;
+}
+
+#tab_container{
+    display: inline-flex;
+    position: relative;
+    justify-content:flex-start;
+    align-content: center;
+    padding:20px;
+}
+
+#instructions,
+#ingredients{
+    background-color:rgba(60, 34, 85, 0.473);
+    border: 1px solid black;
+    box-shadow: inset 1px 1px 1px 1px black;
+    color: white;
+}
+
+#ingredients{
+    margin-right:16px;
+}
+
+#rating_container{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding:0 20px;
+}
+
+.star{
+    display: inline-block;
+    padding:4px 5px;
+}
+
+.star:hover{
+    cursor: pointer;
+}
+
+#rate{
+    font-weight: 400;
+    font-style: italic;
+}
+
+.fa-star{
+    color:orange;
+}
+
+#instructions_list{
+    max-width: 250px;
+}
