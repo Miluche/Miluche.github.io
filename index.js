@@ -28,6 +28,22 @@ function buildList(id, content) {
     }
 }
 
+function rate(startPostions) {
+    //first remove the previous rating
+    for (let start = 1; start <= 5; start++) {
+        let el = document.querySelector(`#star${start}`);
+        el.classList.remove("fa-star");
+        el.classList.add("fa-star-o");
+    };
+
+    //rate upto the chosen value
+    for (let start = 1; start <= startPostions; start++) {
+        let el = document.querySelector(`#star${start}`);
+        el.classList.remove("fa-star-o");
+        el.classList.add("fa-star");
+    };
+}
+
 //generate the rating stars using js
 function buildRating(parent_El) {
     createElement("div", { id: "rating_container" }, parent_El);
@@ -40,26 +56,18 @@ function buildRating(parent_El) {
         let star = document.querySelector(`#star${start}`);
 
         star.addEventListener("mouseover", (evt) => {
-            evt.preventDefault();
             const id = evt.target.id;
             const starNum = parseInt(id[id.length - 1]);
 
-            //first remove the previous rating
-            for (let start = 1; start <= 5; start++) {
-                let el = document.querySelector(`#star${start}`);
-                el.classList.remove("fa-star");
-                el.classList.add("fa-star-o");
-            };
-
-            //rate upto the chosen value
-            for (let start = 1; start <= starNum; start++){
-                let el = document.querySelector(`#star${start}`);
-                el.classList.remove("fa-star-o");
-                el.classList.add("fa-star");
-            };
+            rate(starNum);
         });
 
+        star.addEventListener("onclick", (evt) => {
+            const id = evt.target.id;
+            const starNum = parseInt(id[id.length - 1]);
 
+            rate(starNum);
+        });
     }
 
     
